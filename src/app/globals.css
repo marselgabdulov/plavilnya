@@ -1,4 +1,13 @@
 :root {
+  --header-height: 80px; /* Должно совпадать с высотой header */
+}
+
+main {
+  min-height: calc(100vh - var(--header-height));
+  padding-top: var(--header-height);
+}
+
+:root {
   --background: #ffffff;
   --foreground: #171717;
 }

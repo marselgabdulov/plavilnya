@@ -17,6 +17,7 @@ const Header = () => {
   };
 
   const navItems = [
+    { href: '/', label: 'Главная' },
     { href: '/menu', label: 'Меню' },
     { href: '/gallery', label: 'Галерея' },
     { href: '/contacts', label: 'Контакты' },
@@ -27,14 +28,13 @@ const Header = () => {
       <div className={styles.container}>
         {/* Логотип */}
         <Link href='/' className={styles.logo} onClick={closeMenu}>
-          {/* <Image
-            src="/logo.svg"
-            alt="Логотип"
+          <Image
+            src='/logo.svg'
+            alt='Логотип'
             width={120}
             height={40}
             className={styles.logoImage}
-          /> */}
-          Logo
+          />
         </Link>
 
         {/* Навигация для десктопа */}
@@ -50,12 +50,15 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Кнопка мобильного меню */}
+        {/* Кнопка мобильного меню с анимацией */}
         <button
           className={styles.menuToggle}
           onClick={toggleMenu}
-          aria-label='Открыть меню'>
-          <span className={styles.hamburger}></span>
+          aria-label='Открыть меню'
+          aria-expanded={isMenuOpen}>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
         </button>
 
         {/* Мобильное меню */}

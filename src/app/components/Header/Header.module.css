@@ -36,10 +36,13 @@
   align-items: center;
   text-decoration: none;
   z-index: 1001;
+  min-width: max-content;
 }
 
 .logoImage {
+  /* background-color: pink; */
   transition: opacity 0.3s ease;
+
 }
 
 .logo:hover .logoImage {

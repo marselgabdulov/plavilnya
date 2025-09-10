@@ -26,13 +26,12 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        {/* Логотип */}
         <Link href='/' className={styles.logo} onClick={closeMenu}>
           <Image
-            src='/logo.svg'
+            src='/images/icons/logo_m_b.svg'
             alt='Логотип'
-            width={120}
-            height={40}
+            width={180}
+            height={60}
             className={styles.logoImage}
           />
         </Link>
